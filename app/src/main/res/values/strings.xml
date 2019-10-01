@@ -5,4 +5,8 @@
     <string name="enter_text">Enter text</string>
     <string name="send_text">Send Text</string>
     <string name="result_text">Result Text</string>
+
+    /* LAUNCHER */
+    <string name="label_launcher_activity_test">Test</string>
+    <string name="label_launcher_activity_second_main">Second</string>
 </resources>
