@@ -9,4 +9,7 @@
     /* LAUNCHER */
     <string name="label_launcher_activity_test">Test</string>
     <string name="label_launcher_activity_second_main">Second</string>
+
+    /* CONCATENATION */
+    <string name="hello_username">Hello, %1$s!</string>
 </resources>

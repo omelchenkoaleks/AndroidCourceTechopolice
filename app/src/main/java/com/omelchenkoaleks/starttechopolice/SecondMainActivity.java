@@ -53,7 +53,8 @@ public class SecondMainActivity extends Activity implements View.OnClickListener
 
     private void onSubmitBtnClicked() {
         String receivedText = enterText.getText().toString();
-        showText.setText(receivedText);
+        String concatenation = getString(R.string.hello_username, receivedText);
+        showText.setText(concatenation);
         showText.setVisibility(View.VISIBLE);
     }
 }
