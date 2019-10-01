@@ -1,6 +1,5 @@
 package com.omelchenkoaleks.starttechopolice;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,9 +8,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class SecondMainActivity extends Activity implements View.OnClickListener {
-    private static final boolean LOG = true;
+public class SecondMainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String LOG_TAG = "SecondMainActivity";
 
     private EditText enterText;
@@ -45,7 +44,7 @@ public class SecondMainActivity extends Activity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        if (LOG) Log.d(LOG_TAG, "SecondMainActivity.onClick: " + v);
+        if (BuildConfig.LOG) Log.d(LOG_TAG, "SecondMainActivity.onClick: " + v);
         if (v.getId() == R.id.button) {
             onSubmitBtnClicked();
         }

@@ -12,4 +12,6 @@
 
     /* CONCATENATION */
     <string name="hello_username">Hello, %1$s!</string>
+    <string name="go_over_testactivity">Go Over TestActivity</string>
+    <string name="go_over_secondmainactivity">Go Over SecondMainActivity</string>
 </resources>

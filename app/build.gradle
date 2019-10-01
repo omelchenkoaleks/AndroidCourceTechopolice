@@ -17,11 +17,12 @@ android {
             buildConfigField "boolean", "LOG", "false"
         }
         debug {
-            buildConfigField "boolean", "LOG", "false"
+            buildConfigField "boolean", "LOG", "true"
         }
     }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }
