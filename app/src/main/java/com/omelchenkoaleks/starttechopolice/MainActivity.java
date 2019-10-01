@@ -16,6 +16,37 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    @Override
+    protected void onStart() {
+        if (BuildConfig.LOG) Log.d(LOG_MAIN_ACTIVITY, getClass().getSimpleName() + " .onStart");
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        if (BuildConfig.LOG) Log.d(LOG_MAIN_ACTIVITY, getClass().getSimpleName() + " .onResume");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        if (BuildConfig.LOG) Log.d(LOG_MAIN_ACTIVITY, getClass().getSimpleName() + " .onPause");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        if (BuildConfig.LOG) Log.d(LOG_MAIN_ACTIVITY, getClass().getSimpleName() + " .onStop");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (BuildConfig.LOG) Log.d(LOG_MAIN_ACTIVITY, getClass().getSimpleName() + " .onDestroy");
+        super.onDestroy();
+    }
+
+
     public void onClick(View view) {
         if (BuildConfig.LOG) Log.d(LOG_MAIN_ACTIVITY, "onClick: ");
 
