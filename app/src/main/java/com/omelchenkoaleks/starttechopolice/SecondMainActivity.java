@@ -2,6 +2,7 @@ package com.omelchenkoaleks.starttechopolice;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,7 +10,11 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-public class SecondMainActivity extends Activity {
+public class SecondMainActivity extends Activity implements View.OnClickListener {
+    private static final boolean LOG = true;
+    private static final String LOG_TAG = "SecondMainActivity";
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,13 +26,23 @@ public class SecondMainActivity extends Activity {
         showText.setVisibility(View.INVISIBLE);
 
         Button sendText = findViewById(R.id.button);
-        sendText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String receivedText = enterText.getText().toString();
-                showText.setText(receivedText);
-                showText.setVisibility(View.VISIBLE);
-            }
-        });
+        sendText.setOnClickListener(this);
+
+
+        /* 1 SAMPLE */
+//        Button sendText = findViewById(R.id.button);
+//        sendText.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String receivedText = enterText.getText().toString();
+//                showText.setText(receivedText);
+//                showText.setVisibility(View.VISIBLE);
+//            }
+//        });
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (LOG) Log.d(LOG_TAG, "SecondMainActivity.onClick: " + v);
     }
 }
