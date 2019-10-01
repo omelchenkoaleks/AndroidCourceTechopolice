@@ -14,14 +14,16 @@ public class SecondMainActivity extends Activity implements View.OnClickListener
     private static final boolean LOG = true;
     private static final String LOG_TAG = "SecondMainActivity";
 
+    private EditText enterText;
+    private TextView showText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_main);
 
-        final EditText enterText = findViewById(R.id.editText);
-        final TextView showText = findViewById(R.id.textView3);
+        enterText = findViewById(R.id.editText);
+        showText = findViewById(R.id.textView3);
 
         showText.setVisibility(View.INVISIBLE);
 
@@ -44,5 +46,14 @@ public class SecondMainActivity extends Activity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         if (LOG) Log.d(LOG_TAG, "SecondMainActivity.onClick: " + v);
+        if (v.getId() == R.id.button) {
+            onSubmitBtnClicked();
+        }
+    }
+
+    private void onSubmitBtnClicked() {
+        String receivedText = enterText.getText().toString();
+        showText.setText(receivedText);
+        showText.setVisibility(View.VISIBLE);
     }
 }
