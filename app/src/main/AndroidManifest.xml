@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestActivity">
+        <activity android:name=".TestActivity"
+            android:theme="@style/AppTheme.Floating">
         </activity>
         <activity android:name=".SecondMainActivity">
         </activity>
