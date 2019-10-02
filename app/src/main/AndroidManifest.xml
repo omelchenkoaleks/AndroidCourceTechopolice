@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="._002_layout.layout_constraintHorizontal_biasActivity"></activity>
+        <activity android:name="._002_layout.layout_constraintBaseline_toBaselineOfActivity"></activity>
+        <activity android:name="._002_layout.layout_constraintHorizontal_biasActivity" />
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
