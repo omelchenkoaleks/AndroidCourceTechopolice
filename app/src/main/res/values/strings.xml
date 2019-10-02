@@ -14,4 +14,7 @@
     <string name="hello_username">Hello, %1$s!</string>
     <string name="go_over_testactivity">Go Over TestActivity</string>
     <string name="go_over_secondmainactivity">Go Over SecondMainActivity</string>
+    <string name="_001_introduction">001 Introduction</string>
+    <string name="_002_layout">002 Layout</string>
+    <string name="text">Text</string>
 </resources>

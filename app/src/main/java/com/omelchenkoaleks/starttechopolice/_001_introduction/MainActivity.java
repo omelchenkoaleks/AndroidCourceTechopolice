@@ -1,4 +1,4 @@
-package com.omelchenkoaleks.starttechopolice;
+package com.omelchenkoaleks.starttechopolice._001_introduction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.omelchenkoaleks.starttechopolice.BuildConfig;
+import com.omelchenkoaleks.starttechopolice.R;
 
 public class MainActivity extends AppCompatActivity {
     public static final String LOG_MAIN_ACTIVITY = "MainActivity";

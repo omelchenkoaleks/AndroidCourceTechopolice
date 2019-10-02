@@ -1,4 +1,4 @@
-package com.omelchenkoaleks.starttechopolice;
+package com.omelchenkoaleks.starttechopolice._001_introduction;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.omelchenkoaleks.starttechopolice.BuildConfig;
+import com.omelchenkoaleks.starttechopolice.R;
 
 public class SecondMainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String LOG_TAG = "SecondMainActivity";
