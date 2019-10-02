@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context="._002_layout.LayoutActivity">
 
-    <View
-        android:id="@+id/view_start"
-        android:layout_width="100dp"
-        android:layout_height="0dp"
-        android:background="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/text_1_text_vew"
         android:layout_width="0dp"
@@ -22,10 +13,19 @@
         android:background="@android:color/holo_orange_dark"
         android:text="@string/text"
         android:textSize="30sp"
-        app:layout_constraintWidth_default="wrap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view_end"
         app:layout_constraintStart_toEndOf="@+id/view_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="wrap" />
+
+    <View
+        android:id="@+id/view_start"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -36,5 +36,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        layout="@layout/view_next_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
