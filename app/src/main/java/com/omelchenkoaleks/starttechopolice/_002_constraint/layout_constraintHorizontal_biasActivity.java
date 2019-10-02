@@ -1,4 +1,4 @@
-package com.omelchenkoaleks.starttechopolice._002_layout;
+package com.omelchenkoaleks.starttechopolice._002_constraint;
 
 import androidx.appcompat.app.AppCompatActivity;
 

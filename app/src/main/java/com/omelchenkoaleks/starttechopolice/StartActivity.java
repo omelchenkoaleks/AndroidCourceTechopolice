@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.omelchenkoaleks.starttechopolice._001_introduction.MainActivity;
-import com.omelchenkoaleks.starttechopolice._002_layout.layout_constraintWidth_defaultActivity;
+import com.omelchenkoaleks.starttechopolice._002_constraint.layout_constraintWidth_defaultActivity;
 
 public class StartActivity extends AppCompatActivity {
 

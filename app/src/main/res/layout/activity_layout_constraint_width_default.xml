@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="._002_layout.layout_constraintWidth_defaultActivity">
+    tools:context="._002_constraint.layout_constraintWidth_defaultActivity">
 
     <TextView
         android:id="@+id/text_1_text_vew"
