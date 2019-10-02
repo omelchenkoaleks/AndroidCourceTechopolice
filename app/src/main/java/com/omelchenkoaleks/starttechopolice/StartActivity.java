@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.omelchenkoaleks.starttechopolice._001_introduction.MainActivity;
-import com.omelchenkoaleks.starttechopolice._002_layout.LayoutActivity;
+import com.omelchenkoaleks.starttechopolice._002_layout.layout_constraintWidth_defaultActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -27,7 +27,7 @@ public class StartActivity extends AppCompatActivity {
                 break;
 
             case R.id.layout_button:
-                Intent layoutIntent = new Intent(this, LayoutActivity.class);
+                Intent layoutIntent = new Intent(this, layout_constraintWidth_defaultActivity.class);
                 startActivity(layoutIntent);
                 break;
         }
