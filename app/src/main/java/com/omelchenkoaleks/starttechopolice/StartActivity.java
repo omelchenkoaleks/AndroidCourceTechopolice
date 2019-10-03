@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.omelchenkoaleks.starttechopolice._001_introduction.MainActivity;
 import com.omelchenkoaleks.starttechopolice._002_constraint.layout_constraintWidth_defaultActivity;
+import com.omelchenkoaleks.starttechopolice._003_recycler_view.MovieActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -29,6 +30,11 @@ public class StartActivity extends AppCompatActivity {
             case R.id.layout_button:
                 Intent layoutIntent = new Intent(this, layout_constraintWidth_defaultActivity.class);
                 startActivity(layoutIntent);
+                break;
+
+            case R.id.recycler_view_button:
+                Intent recyclerViewIntent = new Intent(this, MovieActivity.class);
+                startActivity(recyclerViewIntent);
                 break;
         }
     }

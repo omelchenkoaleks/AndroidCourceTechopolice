@@ -22,4 +22,7 @@
     <string name="text_2">text 2</string>
     <string name="text_3">text 3</string>
     <string name="text_long_long_long">Text long long long</string>
+    <string name="movie_name">Movie name</string>
+    <string name="movie_description">Movie description</string>
+    <string name="recycler_view">Recycler View</string>
 </resources>

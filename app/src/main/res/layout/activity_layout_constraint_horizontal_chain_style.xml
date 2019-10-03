@@ -90,7 +90,7 @@
 <!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
 
 
-<!--    3 - spread_inside   -->
+<!--    3 - packed   -->
 
     <TextView
         android:id="@+id/textView4"
