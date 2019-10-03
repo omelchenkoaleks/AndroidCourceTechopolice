@@ -15,21 +15,31 @@ import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
     private List<Movie> mMovies;
+    private Listener mMovieClickListener;
 
-    public MovieAdapter(List<Movie> movies) {
+    public MovieAdapter(List<Movie> movies, Listener onMovieClickListener) {
         mMovies = movies;
+        mMovieClickListener = onMovieClickListener;
     }
 
     @NonNull
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_item, parent, false);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mMovieClickListener.onMovieClick((Movie) v.getTag());
+            }
+        });
         return new MovieViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
-        holder.bind(mMovies.get(position));
+        Movie movie = mMovies.get(position);
+        holder.bind(movie);
+        holder.itemView.setTag(movie);
     }
 
     @Override
@@ -56,5 +66,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         }
     }
 
-
+    interface Listener {
+        void onMovieClick(Movie movie);
+    }
 }

@@ -1,11 +1,13 @@
 package com.omelchenkoaleks.starttechopolice._003_recycler_view;
 
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.omelchenkoaleks.starttechopolice.R;
@@ -24,8 +26,8 @@ public class MovieActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movie);
 
         mMovies = generateMovieList();
-        setupFabButton();
         setupRecyclerView();
+        setupFabButton();
     }
 
     private void onAddClick() {
@@ -35,9 +37,14 @@ public class MovieActivity extends AppCompatActivity {
 
     private void setupRecyclerView() {
         mRecyclerView = findViewById(R.id.recycler_view);
-        mMovieAdapter = new MovieAdapter(mMovies);
+        mMovieAdapter = new MovieAdapter(mMovies,this::onMovieClick);
+
         mRecyclerView.setAdapter(mMovieAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    private void onMovieClick(Movie movie) {
+        Toast.makeText(this, movie.name, Toast.LENGTH_SHORT).show();
     }
 
     private List<Movie> generateMovieList() {
