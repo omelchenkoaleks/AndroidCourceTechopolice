@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.omelchenkoaleks.starttechopolice.R;
 
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ public class MovieActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movie);
 
         mMovies = generateMovieList();
+        setubFabButton();
 
         mRecyclerView = findViewById(R.id.recycler_view);
         mMovieAdapter = new MovieAdapter(mMovies);
@@ -53,5 +56,20 @@ public class MovieActivity extends AppCompatActivity {
                 "Жизнь десятилетнего Гарри Поттера нельзя назвать сладкой: его родители умерли, едва ему исполнился год, а от дяди и тётки, взявших сироту на воспитание, достаются лишь тычки да подзатыльники",
                 R.drawable.movie_7));
         return movies;
+    }
+
+    private void setubFabButton() {
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mMovies.add(generateNewMovie());
+                mMovieAdapter.notifyDataSetChanged();
+            }
+        });
+    }
+
+    private Movie generateNewMovie() {
+        return new Movie("New movie!!!", "Description will be added later!!!", 0);
     }
 }
