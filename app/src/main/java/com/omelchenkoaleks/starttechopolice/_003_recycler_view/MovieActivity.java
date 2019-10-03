@@ -24,8 +24,16 @@ public class MovieActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movie);
 
         mMovies = generateMovieList();
-        setubFabButton();
+        setupFabButton();
+        setupRecyclerView();
+    }
 
+    private void onAddClick() {
+        mMovies.add(generateNewMovie());
+        mMovieAdapter.notifyDataSetChanged();
+    }
+
+    private void setupRecyclerView() {
         mRecyclerView = findViewById(R.id.recycler_view);
         mMovieAdapter = new MovieAdapter(mMovies);
         mRecyclerView.setAdapter(mMovieAdapter);
@@ -58,13 +66,12 @@ public class MovieActivity extends AppCompatActivity {
         return movies;
     }
 
-    private void setubFabButton() {
+    private void setupFabButton() {
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mMovies.add(generateNewMovie());
-                mMovieAdapter.notifyDataSetChanged();
+                onAddClick();
             }
         });
     }
