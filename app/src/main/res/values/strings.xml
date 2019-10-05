@@ -5,6 +5,7 @@
     <string name="enter_text">Enter text</string>
     <string name="send_text">Send Text</string>
     <string name="result_text">Result Text</string>
+    <string name="empty_text" />
 
     /* LAUNCHER */
     <string name="label_launcher_activity_test">Test</string>
@@ -27,4 +28,5 @@
     <string name="recycler_view">Recycler View</string>
     <string name="fire">Fire</string>
     <string name="draw">Draw</string>
+    <string name="handler_thread_sample">Handler Thread Sample</string>
 </resources>

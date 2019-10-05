@@ -11,8 +11,8 @@
         android:id="@+id/introduction_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/_001_introduction"
         android:onClick="onClick"
+        android:text="@string/_001_introduction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,8 +21,8 @@
         android:id="@+id/layout_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/_002_layout"
         android:onClick="onClick"
+        android:text="@string/_002_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/introduction_button" />
@@ -31,8 +31,8 @@
         android:id="@+id/recycler_view_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/recycler_view"
         android:onClick="onClick"
+        android:text="@string/recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_button" />
@@ -41,8 +41,8 @@
         android:id="@+id/fire_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/fire"
         android:onClick="onClick"
+        android:text="@string/fire"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recycler_view_button" />
@@ -51,10 +51,20 @@
         android:id="@+id/draw_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/draw"
         android:onClick="onClick"
+        android:text="@string/draw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fire_button" />
+
+    <Button
+        android:id="@+id/handler_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/handler_thread_sample"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/draw_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

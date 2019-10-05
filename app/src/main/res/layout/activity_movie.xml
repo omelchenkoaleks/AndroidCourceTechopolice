@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="._003_recycler_view.MovieActivity">
+    tools:context="._002_recycler_view.MovieActivity">
 
 
     <androidx.recyclerview.widget.RecyclerView

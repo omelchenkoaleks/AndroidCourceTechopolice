@@ -10,7 +10,8 @@ import com.omelchenkoaleks.starttechopolice._001_draw.DrawActivity;
 import com.omelchenkoaleks.starttechopolice._001_introduction.MainActivity;
 import com.omelchenkoaleks.starttechopolice._002_constraint.layout_constraintWidth_defaultActivity;
 import com.omelchenkoaleks.starttechopolice._001_fire.FireActivity;
-import com.omelchenkoaleks.starttechopolice._003_recycler_view.MovieActivity;
+import com.omelchenkoaleks.starttechopolice._002_recycler_view.MovieActivity;
+import com.omelchenkoaleks.starttechopolice._003_handler_thread.HandlerThreadActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -47,6 +48,11 @@ public class StartActivity extends AppCompatActivity {
             case R.id.draw_button:
                 Intent drawIntent = new Intent(this, DrawActivity.class);
                 startActivity(drawIntent);
+                break;
+
+            case R.id.handler_button:
+                Intent handlerIntent = new Intent(this, HandlerThreadActivity.class);
+                startActivity(handlerIntent);
                 break;
         }
     }

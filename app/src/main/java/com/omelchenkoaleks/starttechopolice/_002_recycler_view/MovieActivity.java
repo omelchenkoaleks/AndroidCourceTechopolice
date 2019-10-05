@@ -1,7 +1,6 @@
-package com.omelchenkoaleks.starttechopolice._003_recycler_view;
+package com.omelchenkoaleks.starttechopolice._002_recycler_view;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
