@@ -67,4 +67,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/draw_button" />
 
+    <Button
+        android:id="@+id/handler_thread_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/handlerthread_class"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/handler_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

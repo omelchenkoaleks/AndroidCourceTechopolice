@@ -1,25 +1,18 @@
-package com.omelchenkoaleks.starttechopolice._003_handler_thread;
+package com.omelchenkoaleks.starttechopolice._003_handler_thread_class;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.omelchenkoaleks.starttechopolice.R;
+import com.omelchenkoaleks.starttechopolice._003_handler_thread.SimpleWorker;
 
-/*
-    Цель примера показать - Как можно реализовать выполнение задач в потоке, который
-    не является главным, т.е. в фоновом (worker) потоке.
-
-    Инициировать выполнение задачи бдуем в главном потоке и в нем же отображать результат.
-
-    Для взаимодействия между потоками используем Handler.
- */
-public class HandlerThreadActivity extends AppCompatActivity {
-
+public class HandlerThreadClassActivity extends AppCompatActivity {
     private final Handler mHandler = new Handler(Looper.getMainLooper()) {
         // вызывается в главном потоке
         @Override
@@ -34,7 +27,7 @@ public class HandlerThreadActivity extends AppCompatActivity {
     private TextView mResultTextView;
 
     // наш фоновый поток для выполнения задач
-    private SimpleWorker mWorker;
+    private HandlerThread mWorker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +36,13 @@ public class HandlerThreadActivity extends AppCompatActivity {
 
         mResultTextView = findViewById(R.id.result_from_handler_text_view);
 
-        // создаем фоновый поток
-        mWorker = new SimpleWorker();
+        mWorker = new HandlerThread("Worker");
+        mWorker.start();
+        final Handler workerHandler = new Handler(mWorker.getLooper());
 
 
-        /* ---------- инициируем выполнение задач в фоновом потоке ---------- */
-
-        mWorker.execute(
-                // вызывается в фоновом потоке
+        // инициируем выполнение задач в фоновом потоке
+        workerHandler.post(
                 new Runnable() {
                     @Override
                     public void run() {
@@ -65,8 +57,9 @@ public class HandlerThreadActivity extends AppCompatActivity {
                         mHandler.sendMessage(message);
                     }
                 }
-        ).execute(
-                // вызывается в фоновом потоке
+        );
+
+        workerHandler.post(
                 new Runnable() {
                     @Override
                     public void run() {
@@ -81,8 +74,9 @@ public class HandlerThreadActivity extends AppCompatActivity {
                         mHandler.sendMessage(message);
                     }
                 }
-        ).execute(
-                // вызывается в фоновом потоке
+        );
+
+        workerHandler.post(
                 new Runnable() {
                     @Override
                     public void run() {
@@ -97,8 +91,9 @@ public class HandlerThreadActivity extends AppCompatActivity {
                         mHandler.sendMessage(message);
                     }
                 }
-        ).execute(
-                // вызывается в фоновом потоке
+        );
+
+        workerHandler.post(
                 new Runnable() {
                     @Override
                     public void run() {
@@ -113,8 +108,9 @@ public class HandlerThreadActivity extends AppCompatActivity {
                         mHandler.sendMessage(message);
                     }
                 }
-        ).execute(
-                // вызывается в фоновом потоке
+        );
+
+        workerHandler.post(
                 new Runnable() {
                     @Override
                     public void run() {
@@ -130,13 +126,5 @@ public class HandlerThreadActivity extends AppCompatActivity {
                     }
                 }
         );
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        // не забываем завершить наш фоновый поток
-        mWorker.quit();
     }
 }

@@ -12,6 +12,7 @@ import com.omelchenkoaleks.starttechopolice._002_constraint.layout_constraintWid
 import com.omelchenkoaleks.starttechopolice._001_fire.FireActivity;
 import com.omelchenkoaleks.starttechopolice._002_recycler_view.MovieActivity;
 import com.omelchenkoaleks.starttechopolice._003_handler_thread.HandlerThreadActivity;
+import com.omelchenkoaleks.starttechopolice._003_handler_thread_class.HandlerThreadClassActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -53,6 +54,11 @@ public class StartActivity extends AppCompatActivity {
             case R.id.handler_button:
                 Intent handlerIntent = new Intent(this, HandlerThreadActivity.class);
                 startActivity(handlerIntent);
+                break;
+
+            case R.id.handler_thread_button:
+                Intent handlerThreadIntent = new Intent(this, HandlerThreadClassActivity.class);
+                startActivity(handlerThreadIntent);
                 break;
         }
     }

@@ -29,4 +29,5 @@
     <string name="fire">Fire</string>
     <string name="draw">Draw</string>
     <string name="handler_thread_sample">Handler Thread Sample</string>
+    <string name="handlerthread_class">HandlerThread class</string>
 </resources>
