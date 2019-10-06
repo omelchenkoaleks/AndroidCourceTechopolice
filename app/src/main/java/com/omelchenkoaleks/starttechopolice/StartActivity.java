@@ -13,6 +13,8 @@ import com.omelchenkoaleks.starttechopolice._001_fire.FireActivity;
 import com.omelchenkoaleks.starttechopolice._002_recycler_view.MovieActivity;
 import com.omelchenkoaleks.starttechopolice._003_handler_thread.HandlerThreadActivity;
 import com.omelchenkoaleks.starttechopolice._003_handler_thread_class.HandlerThreadClassActivity;
+import com.omelchenkoaleks.starttechopolice._003_load_image_async_task.LoadImageActivity;
+import com.omelchenkoaleks.starttechopolice._003_test_load_image.LoadImageTestActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -59,6 +61,16 @@ public class StartActivity extends AppCompatActivity {
             case R.id.handler_thread_button:
                 Intent handlerThreadIntent = new Intent(this, HandlerThreadClassActivity.class);
                 startActivity(handlerThreadIntent);
+                break;
+
+            case R.id.load_image_button:
+                Intent loadImageIntent = new Intent(this, LoadImageActivity.class);
+                startActivity(loadImageIntent);
+                break;
+
+            case R.id.test_load_image_button:
+                Intent loadImageTestIntent = new Intent(this, LoadImageTestActivity.class);
+                startActivity(loadImageTestIntent);
                 break;
         }
     }

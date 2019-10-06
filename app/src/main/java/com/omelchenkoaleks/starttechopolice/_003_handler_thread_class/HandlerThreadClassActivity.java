@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.omelchenkoaleks.starttechopolice.R;
@@ -126,5 +127,13 @@ public class HandlerThreadClassActivity extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        mWorker.quit();
+        Log.d("happy", "onDestroy: mWorker");
     }
 }

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.omelchenkoaleks.starttechopolice">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="._003_handler_thread_class.HandlerThreadClassActivity"></activity>
+        <activity android:name="._003_test_load_image.LoadImageTestActivity"></activity>
+        <activity android:name="._003_load_image_async_task.LoadImageActivity" />
+        <activity android:name="._003_handler_thread_class.HandlerThreadClassActivity" />
         <activity android:name="._003_handler_thread.HandlerThreadActivity" />
         <activity android:name="._001_draw.DrawActivity" />
         <activity android:name="._001_fire.FireActivity" />
