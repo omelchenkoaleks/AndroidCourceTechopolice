@@ -11,6 +11,7 @@ import com.omelchenkoaleks.starttechopolice._001_introduction.MainActivity;
 import com.omelchenkoaleks.starttechopolice._002_constraint.layout_constraintWidth_defaultActivity;
 import com.omelchenkoaleks.starttechopolice._001_fire.FireActivity;
 import com.omelchenkoaleks.starttechopolice._002_recycler_view.MovieActivity;
+import com.omelchenkoaleks.starttechopolice._003_asynctask.GetImageActivity;
 import com.omelchenkoaleks.starttechopolice._003_handler_thread.HandlerThreadActivity;
 import com.omelchenkoaleks.starttechopolice._003_handler_thread_class.HandlerThreadClassActivity;
 import com.omelchenkoaleks.starttechopolice._003_load_image_async_task.LoadImageActivity;
@@ -71,6 +72,11 @@ public class StartActivity extends AppCompatActivity {
             case R.id.test_load_image_button:
                 Intent loadImageTestIntent = new Intent(this, LoadImageTestActivity.class);
                 startActivity(loadImageTestIntent);
+                break;
+
+            case R.id.download_button:
+                Intent downloadIntent = new Intent(this, GetImageActivity.class);
+                startActivity(downloadIntent);
                 break;
         }
     }
