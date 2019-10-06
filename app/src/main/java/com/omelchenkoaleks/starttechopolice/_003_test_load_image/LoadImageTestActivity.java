@@ -2,6 +2,7 @@ package com.omelchenkoaleks.starttechopolice._003_test_load_image;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -47,9 +48,15 @@ public class LoadImageTestActivity extends AppCompatActivity {
                 публикуем картинку на главном потоке, ипользуя для этого
                 специальный метод, определенный в классе Activity
              */
-            LoadImageTestActivity.this.runOnUiThread(() ->
-                mImageView.setImageBitmap(bitmap)
-            );
+            LoadImageTestActivity.this.runOnUiThread(() -> {
+
+                /*
+                    нужно проверить, что UI еще жив !!!
+                 */
+                if (mImageView.isAttachedToWindow()) {
+                    mImageView.setImageBitmap(bitmap);
+                }
+            });
         });
     }
 }
