@@ -107,4 +107,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/test_load_image_button" />
 
+    <Button
+        android:id="@+id/progress_bar_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/test_progressbar_with_asynctask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/download_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@ import com.omelchenkoaleks.starttechopolice._002_recycler_view.MovieActivity;
 import com.omelchenkoaleks.starttechopolice._003_asynctask.GetImageActivity;
 import com.omelchenkoaleks.starttechopolice._003_handler_thread.HandlerThreadActivity;
 import com.omelchenkoaleks.starttechopolice._003_handler_thread_class.HandlerThreadClassActivity;
+import com.omelchenkoaleks.starttechopolice._003_load_image_and_progress_bar.ProgressBarActivity;
 import com.omelchenkoaleks.starttechopolice._003_load_image_async_task.LoadImageActivity;
 import com.omelchenkoaleks.starttechopolice._003_test_load_image.LoadImageTestActivity;
 
@@ -77,6 +78,11 @@ public class StartActivity extends AppCompatActivity {
             case R.id.download_button:
                 Intent downloadIntent = new Intent(this, GetImageActivity.class);
                 startActivity(downloadIntent);
+                break;
+
+            case R.id.progress_bar_button:
+                Intent progressBarIntent = new Intent(this, ProgressBarActivity.class);
+                startActivity(progressBarIntent);
                 break;
         }
     }
